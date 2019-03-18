@@ -1,0 +1,1 @@
+select * from short_urls where ttl > date_created

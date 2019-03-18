@@ -1,0 +1,12 @@
+CREATE TABLE IF NOT EXISTS short_urls (
+  id INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,
+  url_origin VARCHAR(500) NOT NULL,
+  url_short VARBINARY(6),
+  date_created DATETIME NOT NULL,
+  ttl DATETIME NOT NULL,
+  counter INTEGER UNSIGNED NOT NULL DEFAULT '0',
+
+  PRIMARY KEY (id),
+  KEY short_code (url_short)
+)
+ENGINE=InnoDB;
